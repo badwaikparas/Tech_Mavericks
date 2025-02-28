@@ -1,8 +1,8 @@
-// const express = require("express")
-// const router = express.router()
+const express = require("express")
+const router = express.Router()
 
-// router.get("/booking", (req, res) => {
-//     res.send("Booking route")
-// })
+router.get("/", (req, res) => {
+    res.send("Booking route")
+})
 
-// module.exports = router
+module.exports = router

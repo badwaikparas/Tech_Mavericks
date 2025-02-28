@@ -1,15 +1,14 @@
 const express = require("express")
 const cors = require("cors");
 const { connectDb } = require("./db")
-// const allRoutes = require("./routes/allRoutes/routes")
-
+const allRoutes = require("./routes/routes")
 
 
 require('dotenv').config()
 const app = express()
 app.use(cors())
 app.use(express.json())
-// app.use(allRoutes)
+app.use(allRoutes)
 
 
 
