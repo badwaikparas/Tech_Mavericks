@@ -10,6 +10,11 @@ const signupBody = zod.object({
     password: zod.string().min(6)
 })
 
+const loginInBody = zod.object({
+    username: zod.string().email(),
+    password: zod.string()
+})
+
 router.get("/", (req, res) => {
     res.send("User route");
 })
@@ -50,8 +55,41 @@ router.get("/signup", async (req, res) => {
     })
 })
 
-router.get("/login", (req, res) => {
+
+
+
+router.get("/login", async (req, res) => {
     res.send("User Login route");
+
+    const { success } = signinBody.safeParse(req.body)
+    if (!success) {
+        return res.status(411).json({
+            message: "Invalid credentials"
+        })
+    }
+
+    const user = await User.findOne({
+        username: req.body.username,
+        password: req.body.password
+    });
+
+    if (user) {
+        const token = jwt.sign({
+            userId: user._id
+        }, process.env.JWT_SECRET);
+
+        res.json({
+            msg: "Login Sucessfull",
+            token: token
+        })
+        return;
+    } else {
+        res.status(411).json({
+            message: "Invalid Credentials"
+        })
+    }
+
+
 })
 
 module.exports = router;

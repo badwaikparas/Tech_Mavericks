@@ -1,5 +1,9 @@
 # HX2508 Room Booking Assistant - Campus Automation
 
+## Deployment
+
+https://cyber-lab.vercel.app/
+
 ## Overview
 
 The **HX2508 Room Booking Assistant** is a web application designed to streamline the process of reserving classrooms and labs in real-time. The system helps prevent scheduling conflicts and ensures efficient space utilization within a campus setting.
