@@ -2,20 +2,23 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+The following versions of the project receive security updates:
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+| 0.5.x   | :white_check_mark: |
+| 0.4.x   | :white_check_mark: |
+| 0.3.x   | :white_check_mark: |
+| < 0.3   | :x:                |
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+If you discover a security vulnerability, please report it responsibly by following these steps:
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+1. **Contact Us**: Send an email to [security@yourdomain.com](mailto:security@yourdomain.com) with details of the vulnerability.
+2. **Provide Details**: Include a description of the issue, steps to reproduce it, and potential impact.
+3. **Response Time**: We will acknowledge your report within 48 hours and provide updates every 7 days until resolution.
+4. **Responsible Disclosure**: Please do not publicly disclose the vulnerability until we have released a fix and coordinated an advisory.
+
+Thank you for helping keep our project secure!
+
