@@ -43,8 +43,19 @@ const userSchema = new mongoose.Schema({
     }
 });
 
+const ReservationSchema = new mongoose.Schema({
+    classId: { type: mongoose.Schema.Types.ObjectId, required: true, ref: 'Class' },
+    date: { type: String, required: true }, // Format: "YYYY-MM-DD"
+    startTime: { type: String, required: true }, // Format: "HH:MM"
+    endTime: { type: String, required: true }, // Format: "HH:MM"
+    userId: { type: mongoose.Schema.Types.ObjectId, required: true, ref: 'User' }
+});
+
 const User = mongoose.model('User', userSchema);
+const Reservation = mongoose.model('Reservation', ReservationSchema);
+
 module.exports = {
     connectDb,
     User,
+    Reservation
 };
